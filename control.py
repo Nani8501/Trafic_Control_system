@@ -26,15 +26,16 @@ def applyCanny(filename):
     return temp
 
 def pixelcount():
-    img = cv2.imread('gray\\processed_filename.png', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('static/gray/processed_file.png', cv2.IMREAD_GRAYSCALE)
     sample_pixels = np.sum(img == 255)
     
-    img = cv2.imread('gray\\reference_filename.png', cv2.IMREAD_GRAYSCALE)
+    img = cv2.imread('static/gray/reference_file.png', cv2.IMREAD_GRAYSCALE)
     refrence_pixels = np.sum(img == 255)
+    print("Pixel count:",sample_pixels, refrence_pixels)
     return sample_pixels, refrence_pixels
 
 def timeAllocation(sample_pixels, refrence_pixels):
-    avg =( (sample_pixels/refrence_pixels) *100)
+    avg =(sample_pixels/refrence_pixels) *100
     if avg >= 90:
         return "Traffic is very high allocation green signal time : 60 secs"
     if avg > 85 and avg < 90:
