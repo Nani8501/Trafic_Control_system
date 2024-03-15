@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Density Based Smart Traffic Control System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Density Based Smart Traffic Control System</h1>
+        <form action="{{ url_for('upload_traffic_image') }}" method="post" enctype="multipart/form-data">
+            <label for="traffic_image">Upload Traffic Image:</label>
+            <input type="file" name="traffic_image" id="traffic_image">
+            <button type="submit">Upload</button>
+        </form>
+        {% if filename %}
+        <div class="image-container">
+            <h2>Uploaded Traffic Image</h2>
+            <img src="{{ url_for('uploaded_file1', filename=filename) }}" alt=" Image">
+        </div>
+        {% endif %}
+        
+        <form action="{{ url_for('apply_canny') }}" method="post">
+            <input type="hidden" name="filename" value="{{ filename }}">
+            <button type="submit">Process Image</button>
+        </form>
+        
+        {% if processed_filename %}
+        <div class="image-container">
+            <h2>Processed Image</h2>
+            <img src="{{ url_for('static', filename=processed_filename) }}" alt="Processed Image">
+            <img src="{{ url_for('static', filename=real_processed_filename) }}" alt="Processed Image">
+        </div>
+        {% endif %}
+        {% if reference_filename %}
+        <div class="image-container">
+            <h2>Reference Image</h2>
+            <img src="{{ url_for('static', filename=reference_filename) }}" alt="Reference Image">
+            <img src="{{ url_for('static', filename=real_reference_filename) }}" alt="Reference Image">
+        </div>
+        {% endif %}
+        
+        {% if refrence_pixels and sample_pixels %}
+        <div class="pixel-counts">
+            <h2>Pixel Counts</h2>
+            <p>Total Reference White Pixels Count: {{ refrence_pixels }}</p>
+            <p>Total Sample White Pixels Count: {{ sample_pixels }}</p>
+        </div>
+        {% endif %}
+        <form action="{{ url_for('time_allocation') }}" method="post">
+            <button type="submit">Calculate Green Signal Time Allocation</button>
+        </form>
+        {% if green_signal_time %}
+        <div class="green-signal-time">
+            <h2>Green Signal Time Allocation</h2>
+            <p>{{ green_signal_time }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
