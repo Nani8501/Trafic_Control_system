@@ -43,5 +43,3 @@ Contributions to the project are welcome! If you have any suggestions for improv
 
 ## Acknowledgements
 Special thanks to contributors and maintainers of open-source libraries and frameworks used in this project. Their efforts have been instrumental in the success of this endeavor.
-```
-
