@@ -34,7 +34,7 @@ The effectiveness of the traffic signal optimization can be observed through rea
 The project was initiated in December 2023 and successfully completed by Feb 2024.
 
 ## Personal Information
-- **Name**: [Jagadeesh Kokkula]
+- **Name**: Jagadeesh Kokkula
 - **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/jagadeeshkokkula/)
 - **GitHub**: [Your GitHub Profile](https://github.com/Nani8501)
 
