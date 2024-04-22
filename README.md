@@ -35,8 +35,8 @@ The project was initiated in December 2023 and successfully completed by Feb 202
 
 ## Personal Information
 - **Name**: Jagadeesh Kokkula
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/jagadeeshkokkula/)
-- **GitHub**: [Your GitHub Profile](https://github.com/Nani8501)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/jagadeeshkokkula/)
+- **GitHub**: [GitHub Profile](https://github.com/Nani8501)
 
 ## Contribution
 Contributions to the project are welcome! If you have any suggestions for improvements or find any issues, please create an issue or submit a pull request on GitHub.
